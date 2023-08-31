@@ -2,7 +2,7 @@
   "name": "house-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://TigerTimofey.github.io/house-app",
+  "homepage": "https://tigertimofey.github.io/sweet-home/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.17.0",
