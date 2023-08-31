@@ -21,6 +21,13 @@
   position: absolute;
   top: -30px;
 }
+.App-logo-special {
+  max-width: 100%;
+  max-height: 30%;
+  /* height: auto; */
+  position: absolute;
+  top: -30px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   /* .App-logo {
@@ -72,6 +79,7 @@
   box-shadow: none;
 }
 
+/* Contact */
 .image-contact {
   max-width: 45%;
 }
@@ -83,9 +91,15 @@
   text-decoration: none;
   color: white;
 }
-
+/* Wifi */
+.text-start-special {
+  text-align: start;
+}
 .flag-size {
   max-width: 10%;
+}
+.text-black {
+  color: rgb(87, 70, 70);
 }
 
 @import "sweetalert2/dist/sweetalert2.min.css";

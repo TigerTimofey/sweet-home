@@ -16,7 +16,7 @@ function MenuSelect() {
       input: "select",
       inputOptions: {
         FAQ: {
-          wifi: "Wi-fi password",
+          wifi: "Wi-fi ",
           trash: "Where to dispose of trash",
           shop: "Nearest stores",
           restaurants: "Nearest restaurants",
@@ -58,7 +58,7 @@ function MenuSelect() {
   return (
     <div>
       <br />
-      <Button className="pressable-button" onClick={handleSelectOption}>
+      <Button className="pressable-button " onClick={handleSelectOption}>
         Select an Option
       </Button>
       {selectedOption && (

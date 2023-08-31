@@ -17,7 +17,15 @@ function App() {
         {!hideLogo && !passwordCheck && (
           <img src={logo} className="App-logo" alt="logo" />
         )}
-        {passwordCheck ? <Main onChange={showStart} /> : <Start />}
+        {passwordCheck ? (
+          <>
+            <img src={logo} className="App-logo-special" alt="logo" />
+            <br /> <br /> <br />
+            <Main onChange={showStart} />
+          </>
+        ) : (
+          <Start />
+        )}
       </header>
     </div>
   );

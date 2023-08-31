@@ -34,8 +34,6 @@ function Start() {
           window.location.reload();
         }, 1000);
       }
-      console.log(typeof enteredPassword);
-      console.log(typeof passwordLogin);
     };
 
     passwordControl();
