@@ -1,14 +1,23 @@
+@font-face {
+  font-family: "brandFont";
+  src: url(./Main/fonts/Bayon-Regular.ttf);
+}
+.brandFont {
+  font-family: "brandFont";
+  font-size: 20px;
+}
 .App {
   text-align: center;
 }
 
 .App-logo {
   /* add this one to set it back */
-  /* height: 10vmin; */
-  /* pointer-events: none; */
+  /* height: 100vmin;
+  pointer-events: none; */
 
   max-width: 100%;
-  height: auto;
+  max-height: 50%;
+  /* height: auto; */
   position: absolute;
   top: -30px;
 }
@@ -63,10 +72,20 @@
   box-shadow: none;
 }
 
-.custom-dropdown {
-  font-size: 16px;
-  padding: 15px;
-  width: 300px;
+.image-contact {
+  max-width: 45%;
+}
+.text-contact {
+  font-family: brandFont;
+  font-size: 2rem;
+}
+.text-contact a {
+  text-decoration: none;
+  color: white;
+}
+
+.flag-size {
+  max-width: 10%;
 }
 
 @import "sweetalert2/dist/sweetalert2.min.css";

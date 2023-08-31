@@ -14,9 +14,11 @@ function Main() {
   return (
     <>
       <Success />
-      <Button className="pressable-button" onClick={handleShowMenuSelect}>
-        START
-      </Button>
+      {!showMenuSelect && (
+        <Button className="pressable-button" onClick={handleShowMenuSelect}>
+          START
+        </Button>
+      )}
       {showMenuSelect && <MenuSelect showMenu={showMenuSelect} />}
     </>
   );

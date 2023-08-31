@@ -1,56 +1,71 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2/dist/sweetalert2.js";
+import Button from "react-bootstrap/Button";
+import WiFiComponent from "./MainSelectComponents/WiFiComponent";
+import TrashComponent from "./MainSelectComponents/TrashComponent";
+import ShopComponent from "./MainSelectComponents/ShopComponent";
+import RestaurantsComponent from "./MainSelectComponents/RestaurantsComponent";
+import ContactComponent from "./MainSelectComponents/ContactComponent";
 
 function MenuSelect() {
-  const [selectedFruit, setSelectedFruit] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(null);
 
-  const handleSelectFruit = async () => {
-    const { value: fruit } = await Swal.fire({
-      title: "Select field validation",
+  const handleSelectOption = async () => {
+    const { value: question } = await Swal.fire({
+      title: "FAQ",
       input: "select",
       inputOptions: {
-        Fruits: {
-          apples: "Apples",
-          bananas: "Bananas",
-          grapes: "Grapes",
-          oranges: "Oranges",
+        FAQ: {
+          wifi: "Wi-fi password",
+          trash: "Where to dispose of trash",
+          shop: "Nearest stores",
+          restaurants: "Nearest restaurants",
+          contact: "Contact",
         },
-        Vegetables: {
-          potato: "Potato",
-          broccoli: "Broccoli",
-          carrot: "Carrot",
-        },
-        icecream: "Ice cream",
       },
-      inputPlaceholder: "Select a fruit",
+      inputPlaceholder: "Choose question",
       showCancelButton: true,
-      inputValidator: (value) => {
-        return new Promise((resolve) => {
-          if (value === "oranges") {
-            resolve();
-          } else {
-            resolve("You need to select oranges :)");
-          }
-        });
-      },
-      customClass: {
-        input: "custom-dropdown", // Apply custom style to the dropdown
-      },
-      // ... rest of your Swal.fire options ...
     });
 
-    if (fruit) {
-      setSelectedFruit(fruit);
-      Swal.fire(`You selected: ${fruit}`);
+    if (question) {
+      setSelectedOption(question);
+    } else {
+      Swal.fire("Please choose a question");
     }
+  };
+
+  const renderSelectedComponent = () => {
+    switch (selectedOption) {
+      case "wifi":
+        return <WiFiComponent />;
+      case "trash":
+        return <TrashComponent />;
+      case "shop":
+        return <ShopComponent />;
+      case "restaurants":
+        return <RestaurantsComponent />;
+      case "contact":
+        return <ContactComponent />;
+      default:
+        return null;
+    }
+  };
+
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
   return (
     <div>
-      {selectedFruit ? (
-        <div>You selected: {selectedFruit}</div>
-      ) : (
-        <button onClick={handleSelectFruit}>Select a Fruit</button>
+      <br />
+      <Button className="pressable-button" onClick={handleSelectOption}>
+        Select an Option
+      </Button>
+      {selectedOption && (
+        <div>
+          <h3>{capitalizeFirstLetter(selectedOption)}</h3>
+          {renderSelectedComponent()}
+        </div>
       )}
     </div>
   );
