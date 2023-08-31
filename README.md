@@ -1,71 +1,28 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## `About project`
 
-## Available Scripts
+This project is intended for users who rent out their apartment through Airbnb. Guests of this user simply scan the QR code and get to the site page. Filling the site gives a complete overview of how and what works inside the apartment.
 
-In the project directory, you can run:
+## `Functionality`
 
-### `npm start`
+As soon as guests scan the QR code and get to the site page. In order to enter the site they need to enter a password. After entering the correct password, the user is able to interact with the menu. If the password is incorrect, the system will prompt you to enter it again. In the menu, the user will get a pop-up window where he will be asked to select a question. After selecting a question, the user will be shown a component with information. The project is primarily optimized for phones, but works flawlessly on all screens.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## `Versions and used packages`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+@react-google-maps/api version "^2.18.1"\
+@reduxjs/toolkit version "1.9.5"\
+react-redux "8.1.2"
+web-vitals ^2.1.4"
+country-flag-icons": "1.5.7",\
+bootstrap version "5.3.1"\
+node-sass version "7.0.3"\
+sweetalert2 "11.7.27"\
+react version "18.2.0"\
+react-bootstrap version "2.7.2"\
+react-dom version "18.2.0"\
+react-scripts version "5.0.1"
 
-### `npm test`
+## `How to add password`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# my-app
+In order to set your password, you should go in and enter it in the './services/PasswordLogin.jsx'. In this project, the password is in the form of a string so that the code is more optimized.
