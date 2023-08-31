@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/house-app/static/css/main.7ec1237c.css",
+    "main.js": "/house-app/static/js/main.39b7b6bf.js",
+    "static/js/787.6d3dc012.chunk.js": "/house-app/static/js/787.6d3dc012.chunk.js",
+    "static/media/mt4u.png": "/house-app/static/media/mt4u.40cec588c8992c88f0f4.png",
+    "index.html": "/house-app/index.html",
+    "main.7ec1237c.css.map": "/house-app/static/css/main.7ec1237c.css.map",
+    "main.39b7b6bf.js.map": "/house-app/static/js/main.39b7b6bf.js.map",
+    "787.6d3dc012.chunk.js.map": "/house-app/static/js/787.6d3dc012.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ec1237c.css",
+    "static/js/main.39b7b6bf.js"
+  ]
+}
