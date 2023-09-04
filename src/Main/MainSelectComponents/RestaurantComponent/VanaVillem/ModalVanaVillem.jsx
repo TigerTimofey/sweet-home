@@ -13,14 +13,16 @@ function ModalVanaVillem({ show, handleClose }) {
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
         <Modal.Title className="container">
-          <p className="text-center">
+          <div className="text-center">
             {" "}
             Vana Villem Pub
             <br />
-            11:00 AM - 9:00 PM
-            <br />
-            Monday-Sunday
-          </p>
+            <h6>
+              11:00 AM - 9:00 PM
+              <br />
+              Monday-Sunday
+            </h6>
+          </div>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

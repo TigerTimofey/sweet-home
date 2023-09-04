@@ -7,6 +7,7 @@ import ModalVanaVillem from "./VanaVillem/ModalVanaVillem";
 import ModalKohvikRein from "./KohvikReinCard/ModalKohvikRein";
 import ModalJaposha from "./Japosha/ModalJaposha";
 import ModalPreciousCafe from "./Preciuos/ModalPreciousCafe";
+import ModalArgentina from "./Argentina/ModalArgentina";
 
 function RestaurantsComponent() {
   const [show, setShow] = useState(false);
@@ -25,12 +26,16 @@ function RestaurantsComponent() {
   const handleClosePrecious = () => setShowPrecious(false);
   const handleShowPrecious = () => setShowPrecious(true);
 
+  const [showArgentina, setShowArgentina] = useState(false); // Corrected variable name
+  const handleCloseArgentina = () => setShowArgentina(false);
+  const handleShowArgentina = () => setShowArgentina(true);
+
   return (
     <Container>
       <Row>
         <Col xs={12}>
           <button onClick={handleShow} className="pressable-button-resto">
-            Villem
+            Vana Villem
           </button>
           <ModalVanaVillem
             handleShow={handleShow}
@@ -44,7 +49,7 @@ function RestaurantsComponent() {
             onClick={handleShowPrecious}
             className="pressable-button-resto"
           >
-            Precious
+            Precious Cafe
           </button>
           <ModalPreciousCafe
             showPrecious={showPrecious} // Corrected prop name
@@ -54,7 +59,7 @@ function RestaurantsComponent() {
         <br /> <br />
         <Col xs={12}>
           <button onClick={handleShowRein} className="pressable-button-resto">
-            Rein
+            Rein Cafe
           </button>
           <ModalKohvikRein
             showRein={showRein}
@@ -67,11 +72,23 @@ function RestaurantsComponent() {
             onClick={handleShowJaposha}
             className="pressable-button-resto"
           >
-            Japosha
+            Japosha Sushi
           </button>
           <ModalJaposha
             showJaposha={showJaposha}
             handleCloseJaposha={handleCloseJaposha}
+          />
+        </Col>
+        <Col xs={12}>
+          <button
+            onClick={handleShowArgentina}
+            className="pressable-button-resto"
+          >
+            Restoran Argentina
+          </button>
+          <ModalArgentina
+            showArgentina={showArgentina}
+            handleCloseArgentina={handleCloseArgentina}
           />
         </Col>
       </Row>

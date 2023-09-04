@@ -13,13 +13,15 @@ function ModalPreciousCafe({ showPrecious, handleClosePrecious }) {
     <Modal show={showPrecious} onHide={handleClosePrecious}>
       <Modal.Header closeButton>
         <Modal.Title className="container">
-          <p className="text-center">
+          <div className="text-center">
             Precious Cafe
-            <br />
-            8:00 AM - 11:00 AM
-            <br />
-            Monday-Friday
-          </p>
+            <br />{" "}
+            <h6>
+              8:00 AM - 11:00 AM
+              <br />
+              Monday-Friday
+            </h6>
+          </div>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

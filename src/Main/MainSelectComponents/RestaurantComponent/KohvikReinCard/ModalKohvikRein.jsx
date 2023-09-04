@@ -13,12 +13,14 @@ function ModalKohvikRein({ showRein, handleCloseRein }) {
     <Modal show={showRein} onHide={handleCloseRein}>
       <Modal.Header closeButton>
         <Modal.Title className="container">
-          <p className="text-center">
-            Cafe Rein <br />
-            9:00 AM - 4:30 PM
-            <br />
-            Monday-Friday
-          </p>
+          <div className="text-center">
+            Cafe Rein <br />{" "}
+            <h6>
+              9:00 AM - 4:30 PM
+              <br />
+              Monday-Friday
+            </h6>
+          </div>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

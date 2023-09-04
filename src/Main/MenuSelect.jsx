@@ -4,26 +4,28 @@ import WiFiComponent from "./MainSelectComponents/WiFiComponent";
 import TrashComponent from "./MainSelectComponents/TrashComponent";
 import ShopComponent from "./MainSelectComponents/ShopComponent/Map/ShopComponent";
 import RestaurantsComponent from "./MainSelectComponents/RestaurantComponent/RestaurantsComponent";
-import ContactComponent from "./MainSelectComponents/ContactComponent";
+import ContactComponent from "./MainSelectComponents/ContactComponent/ContactComponent";
 
 function MenuSelect() {
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleSelectOption = async () => {
     const { value: question } = await Swal.fire({
-      title: "FAQ",
+      title: "MENU",
       input: "select",
       inputOptions: {
         FAQ: {
-          wifi: "Wi-fi",
-          trash: "Where to dispose of trash",
-          shop: "Nearest stores",
-          restaurants: "Nearest restaurants",
+          "Wi-fi": "Wi-fi",
+          "Where to dispose of trash": "Where to dispose of trash",
+          "Nearest stores": "Nearest stores",
+          "Nearest restaurants": "Nearest restaurants",
           contact: "Contact",
         },
       },
-      inputPlaceholder: "Choose question",
-      showCancelButton: true,
+      inputPlaceholder: "Information",
+      showCancelButton: false,
+      showConfirmButton: true,
+      confirmButtonText: "Confirm",
     });
 
     if (question) {
@@ -35,13 +37,13 @@ function MenuSelect() {
 
   const renderSelectedComponent = () => {
     switch (selectedOption) {
-      case "wifi":
+      case "Wi-fi":
         return <WiFiComponent />;
-      case "trash":
+      case "Where to dispose of trash":
         return <TrashComponent />;
-      case "shop":
+      case "Nearest stores":
         return <ShopComponent />;
-      case "restaurants":
+      case "Nearest restaurants":
         return <RestaurantsComponent />;
       case "contact":
         return <ContactComponent />;
@@ -50,14 +52,10 @@ function MenuSelect() {
     }
   };
 
-  const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
-
   return (
     <div>
       <button className="pressable-button " onClick={handleSelectOption}>
-        Select an Option
+        MENU
       </button>
       <br />
       <br />
@@ -73,3 +71,7 @@ function MenuSelect() {
 }
 
 export default MenuSelect;
+
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};

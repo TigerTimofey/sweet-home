@@ -72,9 +72,12 @@
 .image-contact {
   max-width: 45%;
 }
-.text-contact {
+.text-contact-name {
   font-family: brandFont;
-  font-size: 2rem;
+}
+.text-contact {
+  /* font-family: brandFont; */
+  font-size: 1.3rem;
 }
 .text-contact a {
   text-decoration: none;
@@ -131,6 +134,8 @@
 .pressable-button-red {
   padding: 15px 30px;
   font-size: 18px;
+
+  padding: 11px;
   background-color: #e46a45;
   color: rgb(251, 251, 251);
   border: none;

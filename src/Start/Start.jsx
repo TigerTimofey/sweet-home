@@ -39,17 +39,7 @@ function Start() {
     passwordControl();
   }, [dispatch]);
 
-  return (
-    <div>
-      {/* {passwordCheck ? (
-        <div>
-          <p>Password correct! New component is shown.</p>
-        </div>
-      ) : (
-        <p>Password is incorrect! New component is shown.</p>
-      )} */}
-    </div>
-  );
+  return null;
 }
 
 export default Start;

@@ -2,21 +2,22 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import JaposhaCard from "./JaposhaCard";
 
-function ModalJaposha({ showJaposha, handleCloseJaposha }) {
-  const handleGoToJaposha = () => {
-    window.open("https://goo.gl/maps/28xcPwDJF9T9Fxm78", "_blank");
+import ArgentinaCard from "./ArgentinaCard";
+
+function ModalArgentina({ showArgentina, handleCloseArgentina }) {
+  const handleGoToArgentina = () => {
+    window.open("https://goo.gl/maps/fgVaGTa5Ga1Sw8HX7", "_blank");
   };
 
   return (
-    <Modal show={showJaposha} onHide={handleCloseJaposha}>
+    <Modal show={showArgentina} onHide={handleCloseArgentina}>
       <Modal.Header closeButton>
         <Modal.Title className="container">
           <div className="text-center">
-            Sushi Japosha <br />
+            Argentina <br />
             <h6>
-              11:00 AM - 10:00 PM
+              12:00 AM - 10:00 PM
               <br />
               Monday-Sunday
             </h6>
@@ -28,7 +29,7 @@ function ModalJaposha({ showJaposha, handleCloseJaposha }) {
           <Container fluid="md">
             <Row>
               <Col>
-                <JaposhaCard />
+                <ArgentinaCard />
               </Col>
               {/* <Col></Col> */}
             </Row>
@@ -36,14 +37,17 @@ function ModalJaposha({ showJaposha, handleCloseJaposha }) {
         </div>
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-center align-items-center">
-        <button className="pressable-button-red" onClick={handleCloseJaposha}>
+        <button className="pressable-button-red" onClick={handleCloseArgentina}>
           Close
         </button>
-        <button className="pressable-button-resto" onClick={handleGoToJaposha}>
+        <button
+          className="pressable-button-resto"
+          onClick={handleGoToArgentina}
+        >
           Route to the place
         </button>
       </Modal.Footer>
     </Modal>
   );
 }
-export default ModalJaposha;
+export default ModalArgentina;
