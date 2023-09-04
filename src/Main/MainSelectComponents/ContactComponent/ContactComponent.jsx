@@ -19,7 +19,7 @@ function ContactComponent() {
         <Col xs={6}>
           <Card
             className=" contact-special d-flex justify-content-center"
-            style={{ width: "12rem" }}
+            style={{ minWidth: "10rem", maxWidth: "12rem" }}
           >
             <div className="d-flex justify-content-center ">
               <Card.Img className="image-contact " variant="top" src={vikky} />
@@ -29,15 +29,16 @@ function ContactComponent() {
               <US title="United States" className="flag-size" />{" "}
               <EE title="Estonia" className="flag-size" />{" "}
               <RU title="Russia" className="flag-size" />{" "}
-              <ES title="Spain" className="flag-size" /> <br />
-              <a href="tel:+37255647759">+372 55647759</a>
+              <ES title="Spain" className="flag-size" />
+              <br />
+              <a href="tel:+37255647759">55647759</a>
             </Card.Body>
           </Card>
         </Col>
         <Col xs={6}>
           <Card
             className=" contact-special d-flex justify-content-center"
-            style={{ width: "12rem" }}
+            style={{ minWidth: "10rem", maxWidth: "12rem" }}
           >
             <div className="d-flex justify-content-center ">
               <Card.Img className="image-contact " variant="top" src={timmy} />
@@ -46,8 +47,9 @@ function ContactComponent() {
               <Card.Title className="text-contact-name">Timofey</Card.Title>
               <US title="United States" className="flag-size" />{" "}
               <EE title="Estonia" className="flag-size" />{" "}
-              <RU title="Russia" className="flag-size" /> <br />
-              <a href="tel:+37258581912">+372 58581912</a>
+              <RU title="Russia" className="flag-size" />
+              <br />
+              <a href="tel:+37258581912">58581912</a>
             </Card.Body>
           </Card>
         </Col>
