@@ -1,6 +1,6 @@
 @font-face {
   font-family: "brandFont";
-  src: url(./Main/fonts/Bayon-Regular.ttf);
+  src: url(./Main/fonts/StardosStencil-Bold.ttf);
 }
 .brandFont {
   font-family: "brandFont";
@@ -11,28 +11,18 @@
 }
 
 .App-logo {
-  /* add this one to set it back */
-  /* height: 100vmin;
-  pointer-events: none; */
-
   max-width: 100%;
   max-height: 50%;
-  /* height: auto; */
+
   position: absolute;
   top: -30px;
 }
+
 .App-logo-special {
   max-width: 100%;
   max-height: 30%;
-  /* height: auto; */
   position: absolute;
   top: -30px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  /* .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  } */
 }
 
 .App-header {
@@ -61,6 +51,7 @@
 .pressable-button {
   padding: 15px 30px;
   font-size: 18px;
+  font-family: brandFont;
   background-color: white;
   color: black;
   border: none;
@@ -70,11 +61,9 @@
 }
 
 .pressable-button:hover {
+  color: black;
   background-color: white;
   cursor: pointer;
-}
-
-.pressable-button:active {
   transform: translateY(5px);
   box-shadow: none;
 }
@@ -89,7 +78,10 @@
 }
 .text-contact a {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
+}
+.contact-special {
+  border-radius: 8%;
 }
 /* Wifi */
 .text-start-special {
@@ -102,4 +94,57 @@
   color: rgb(87, 70, 70);
 }
 
+/* Map */
+#map {
+  min-width: 400px;
+  min-height: 400px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Restaurans */
+.pressable-button-resto {
+  font-family: brandFont;
+  padding: 15px 30px;
+  width: 14rem;
+  padding: 11px;
+  margin: 10px;
+  font-size: 18px;
+  background-color: #ec9d2e;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 5px 0px #b3823d;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pressable-button-resto:hover {
+  background-color: #ec9d2e;
+  cursor: pointer;
+  transform: translateY(5px);
+  box-shadow: none;
+}
+.pressable-button-red {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #e46a45;
+  color: rgb(251, 251, 251);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 5px 0px #b3823d;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pressable-button-red:hover {
+  background-color: #e46a45;
+  cursor: pointer;
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
 @import "sweetalert2/dist/sweetalert2.min.css";
+@import "bootstrap/dist/css/bootstrap.min.css";

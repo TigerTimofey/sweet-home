@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2/dist/sweetalert2.js";
-import Button from "react-bootstrap/Button";
 import WiFiComponent from "./MainSelectComponents/WiFiComponent";
 import TrashComponent from "./MainSelectComponents/TrashComponent";
-import ShopComponent from "./MainSelectComponents/ShopComponent";
-import RestaurantsComponent from "./MainSelectComponents/RestaurantsComponent";
+import ShopComponent from "./MainSelectComponents/ShopComponent/Map/ShopComponent";
+import RestaurantsComponent from "./MainSelectComponents/RestaurantComponent/RestaurantsComponent";
 import ContactComponent from "./MainSelectComponents/ContactComponent";
 
 function MenuSelect() {
@@ -16,7 +15,7 @@ function MenuSelect() {
       input: "select",
       inputOptions: {
         FAQ: {
-          wifi: "Wi-fi ",
+          wifi: "Wi-fi",
           trash: "Where to dispose of trash",
           shop: "Nearest stores",
           restaurants: "Nearest restaurants",
@@ -57,13 +56,15 @@ function MenuSelect() {
 
   return (
     <div>
-      <br />
-      <Button className="pressable-button " onClick={handleSelectOption}>
+      <button className="pressable-button " onClick={handleSelectOption}>
         Select an Option
-      </Button>
+      </button>
+      <br />
+      <br />
       {selectedOption && (
         <div>
           <h3>{capitalizeFirstLetter(selectedOption)}</h3>
+
           {renderSelectedComponent()}
         </div>
       )}

@@ -8,8 +8,10 @@ import ES from "country-flag-icons/react/3x2/ES";
 
 function ContactComponent() {
   return (
-    <Card>
-      <Card.Img className="image-contact" variant="top" src={vikky} />
+    <Card className=" contact-special d-flex justify-content-center">
+      <div className="d-flex justify-content-center ">
+        <Card.Img className="image-contact " variant="top" src={vikky} />
+      </div>
       <Card.Body className="text-contact">
         <Card.Title>Viktoria</Card.Title>
         <US title="United States" className="flag-size" />{" "}

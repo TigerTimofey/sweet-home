@@ -1,4 +1,5 @@
 function TrashComponent() {
-  return <>TrashComponent</>;
+  return <div>TrashComponent</div>;
 }
+
 export default TrashComponent;
