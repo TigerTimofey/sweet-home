@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/sweet-home/static/css/main.1e74fb29.css",
-    "main.js": "/sweet-home/static/js/main.f8dad0f1.js",
+    "main.css": "/sweet-home/static/css/main.57abf0f6.css",
+    "main.js": "/sweet-home/static/js/main.7dc42128.js",
     "static/js/787.6d3dc012.chunk.js": "/sweet-home/static/js/787.6d3dc012.chunk.js",
     "static/media/vikky.png": "/sweet-home/static/media/vikky.8793df05a10da740ba12.png",
-    "static/media/Bayon-Regular.ttf": "/sweet-home/static/media/Bayon-Regular.3e50c263cbd4b930be3e.ttf",
+    "static/media/StardosStencil-Bold.ttf": "/sweet-home/static/media/StardosStencil-Bold.1f0aada097920b373758.ttf",
     "static/media/mt4u.png": "/sweet-home/static/media/mt4u.177290d814e00141f791.png",
     "index.html": "/sweet-home/index.html",
-    "main.1e74fb29.css.map": "/sweet-home/static/css/main.1e74fb29.css.map",
-    "main.f8dad0f1.js.map": "/sweet-home/static/js/main.f8dad0f1.js.map",
+    "main.57abf0f6.css.map": "/sweet-home/static/css/main.57abf0f6.css.map",
+    "main.7dc42128.js.map": "/sweet-home/static/js/main.7dc42128.js.map",
     "787.6d3dc012.chunk.js.map": "/sweet-home/static/js/787.6d3dc012.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e74fb29.css",
-    "static/js/main.f8dad0f1.js"
+    "static/css/main.57abf0f6.css",
+    "static/js/main.7dc42128.js"
   ]
 }
