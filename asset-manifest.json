@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/sweet-home/static/css/main.57abf0f6.css",
-    "main.js": "/sweet-home/static/js/main.7dc42128.js",
+    "main.css": "/sweet-home/static/css/main.0dadd5ba.css",
+    "main.js": "/sweet-home/static/js/main.0f319a15.js",
     "static/js/787.6d3dc012.chunk.js": "/sweet-home/static/js/787.6d3dc012.chunk.js",
     "static/media/vikky.png": "/sweet-home/static/media/vikky.8793df05a10da740ba12.png",
     "static/media/StardosStencil-Bold.ttf": "/sweet-home/static/media/StardosStencil-Bold.1f0aada097920b373758.ttf",
     "static/media/mt4u.png": "/sweet-home/static/media/mt4u.177290d814e00141f791.png",
     "index.html": "/sweet-home/index.html",
-    "main.57abf0f6.css.map": "/sweet-home/static/css/main.57abf0f6.css.map",
-    "main.7dc42128.js.map": "/sweet-home/static/js/main.7dc42128.js.map",
+    "main.0dadd5ba.css.map": "/sweet-home/static/css/main.0dadd5ba.css.map",
+    "main.0f319a15.js.map": "/sweet-home/static/js/main.0f319a15.js.map",
     "787.6d3dc012.chunk.js.map": "/sweet-home/static/js/787.6d3dc012.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57abf0f6.css",
-    "static/js/main.7dc42128.js"
+    "static/css/main.0dadd5ba.css",
+    "static/js/main.0f319a15.js"
   ]
 }
