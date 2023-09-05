@@ -22,7 +22,7 @@ function MenuSelect() {
           contact: "Contact",
         },
       },
-      inputPlaceholder: "Information",
+      inputPlaceholder: "Select question",
       showCancelButton: false,
       showConfirmButton: true,
       confirmButtonText: "Confirm",

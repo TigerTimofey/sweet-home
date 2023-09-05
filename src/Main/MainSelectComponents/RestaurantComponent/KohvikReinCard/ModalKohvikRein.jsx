@@ -11,7 +11,7 @@ function ModalKohvikRein({ showRein, handleCloseRein }) {
 
   return (
     <Modal show={showRein} onHide={handleCloseRein}>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
             Cafe Rein <br />{" "}

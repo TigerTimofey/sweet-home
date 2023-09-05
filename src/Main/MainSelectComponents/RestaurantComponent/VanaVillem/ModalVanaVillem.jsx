@@ -11,7 +11,7 @@ function ModalVanaVillem({ show, handleClose }) {
 
   return (
     <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
             {" "}

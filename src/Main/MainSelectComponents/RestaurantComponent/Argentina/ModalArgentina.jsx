@@ -12,7 +12,7 @@ function ModalArgentina({ showArgentina, handleCloseArgentina }) {
 
   return (
     <Modal show={showArgentina} onHide={handleCloseArgentina}>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
             Argentina <br />

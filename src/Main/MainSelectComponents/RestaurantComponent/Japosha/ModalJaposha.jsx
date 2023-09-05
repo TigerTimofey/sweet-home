@@ -11,7 +11,7 @@ function ModalJaposha({ showJaposha, handleCloseJaposha }) {
 
   return (
     <Modal show={showJaposha} onHide={handleCloseJaposha}>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
             Sushi Japosha <br />

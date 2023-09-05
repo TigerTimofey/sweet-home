@@ -11,7 +11,7 @@ function ModalPreciousCafe({ showPrecious, handleClosePrecious }) {
 
   return (
     <Modal show={showPrecious} onHide={handleClosePrecious}>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
             Precious Cafe

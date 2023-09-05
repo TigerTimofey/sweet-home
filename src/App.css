@@ -83,16 +83,29 @@
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
 .contact-special {
   border-radius: 8%;
 }
-/* Wifi */
-.text-start-special {
-  text-align: start;
+.online-status {
+  width: 10%;
 }
 .flag-size {
   max-width: 10%;
 }
+
+.badge-contact:hover {
+  cursor: pointer;
+}
+
+/* Wifi */
+.text-start-special {
+  text-align: start;
+}
+
 .text-black {
   color: rgb(87, 70, 70);
 }
