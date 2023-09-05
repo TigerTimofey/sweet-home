@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2/dist/sweetalert2.js";
-import WiFiComponent from "./MainSelectComponents/WiFiComponent";
+import WiFiComponent from "./MainSelectComponents/WifiComponent/WiFiComponent";
 import TrashComponent from "./MainSelectComponents/TrashComponent/TrashComponent";
 
 import RestaurantsComponent from "./MainSelectComponents/RestaurantComponent/RestaurantsComponent";
 import ContactComponent from "./MainSelectComponents/ContactComponent/ContactComponent";
 import ShopComponent from "./MainSelectComponents/ShopComponent/ShopComponent";
+import ApartmentComponent from "./MainSelectComponents/ApartmentComponent/ApartmentComponent";
 
 function MenuSelect() {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -20,6 +21,7 @@ function MenuSelect() {
           "Trash disposal location": "Trash disposal location",
           "Nearest stores": "Nearest stores",
           "Nearest restaurants": "Nearest restaurants",
+          Apartment: "Apartment",
           contact: "Contact",
         },
       },
@@ -48,6 +50,8 @@ function MenuSelect() {
         return <RestaurantsComponent />;
       case "contact":
         return <ContactComponent />;
+      case "Apartment":
+        return <ApartmentComponent />;
       default:
         return null;
     }
