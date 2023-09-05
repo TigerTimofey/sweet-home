@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { loginWifi, passwordWifi } from "../../../services/dataForComponents";
+import Badge from "react-bootstrap/Badge";
 
 function WiFiComponent() {
   const [copied, setCopied] = useState(false);
@@ -10,32 +11,44 @@ function WiFiComponent() {
   const copyPasswordToClipboard = () => {
     navigator.clipboard.writeText(passwordWifi);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 1000);
+  };
+
+  const handlePasswordClick = () => {
+    copyPasswordToClipboard();
   };
 
   return (
     <div className="text-contact d-flex  text-wifi ">
       <Container>
+        <br />
+
         <Row>
-          <Col xs={6}>
-            Login: <span className="text-black">{loginWifi}</span>
+          <Col xs={12}>
+            Login:{" "}
+            <div>
+              <span className="text-black">{loginWifi}</span>
+            </div>
           </Col>
-          <Col xs={6}>
-            Password: <span className="text-black">{passwordWifi}</span>{" "}
+          <Col xs={12}>
+            Password:{" "}
+            <span
+              className="text-black"
+              onClick={handlePasswordClick}
+              style={{ cursor: "pointer" }}
+            >
+              <div>
+                {" "}
+                {passwordWifi}
+                {copied && ( // Conditionally render the Badge when copied is true
+                  <h6>
+                    <Badge bg="secondary">Copied</Badge>
+                  </h6>
+                )}
+              </div>
+            </span>
           </Col>
           <br /> <br /> <br />
-          <Col
-            xs={12}
-            className="d-flex align-items-center justify-content-center"
-          >
-            {" "}
-            <button
-              className="pressable-button-resto w-50 "
-              onClick={copyPasswordToClipboard}
-            >
-              {copied ? "Password copied" : "Copy password"}
-            </button>
-          </Col>
         </Row>
       </Container>
     </div>

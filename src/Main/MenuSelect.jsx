@@ -6,7 +6,6 @@ import TrashComponent from "./MainSelectComponents/TrashComponent/TrashComponent
 import RestaurantsComponent from "./MainSelectComponents/RestaurantComponent/RestaurantsComponent";
 import ContactComponent from "./MainSelectComponents/ContactComponent/ContactComponent";
 import ShopComponent from "./MainSelectComponents/ShopComponent/ShopComponent";
-import ApartmentComponent from "./MainSelectComponents/ApartmentComponent/ApartmentComponent";
 
 function MenuSelect() {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -17,11 +16,11 @@ function MenuSelect() {
       input: "select",
       inputOptions: {
         FAQ: {
-          "Wi-fi": "Wi-fi",
+          "Wi-Fi": "Wi-Fi",
           "Trash disposal location": "Trash disposal location",
           "Nearest stores": "Nearest stores",
           "Nearest restaurants": "Nearest restaurants",
-          Apartment: "Apartment",
+
           contact: "Contact",
         },
       },
@@ -40,7 +39,7 @@ function MenuSelect() {
 
   const renderSelectedComponent = () => {
     switch (selectedOption) {
-      case "Wi-fi":
+      case "Wi-Fi":
         return <WiFiComponent />;
       case "Trash disposal location":
         return <TrashComponent />;
@@ -50,8 +49,6 @@ function MenuSelect() {
         return <RestaurantsComponent />;
       case "contact":
         return <ContactComponent />;
-      case "Apartment":
-        return <ApartmentComponent />;
       default:
         return null;
     }
