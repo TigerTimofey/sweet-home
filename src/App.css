@@ -105,9 +105,32 @@ a {
 .text-start-special {
   text-align: start;
 }
-
+.text-wifi {
+  font-family: brandFont;
+}
 .text-black {
   color: rgb(87, 70, 70);
+}
+.pressable-button-wifi {
+  font-family: brandFont;
+  padding: 15px 30px;
+  width: 2.5rem;
+  padding: 11px;
+
+  font-size: 0.5rem;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 5px 0px rgb(158, 155, 155);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pressable-button-wifi:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transform: translateY(5px);
+  box-shadow: none;
 }
 
 /* Map */
@@ -162,6 +185,15 @@ a {
   cursor: pointer;
   transform: translateY(5px);
   box-shadow: none;
+}
+/* Trash */
+.container-trash {
+  width: 300px;
+  height: 200px;
+}
+.image-trash {
+  width: 200px;
+  height: 300px;
 }
 
 @import "sweetalert2/dist/sweetalert2.min.css";

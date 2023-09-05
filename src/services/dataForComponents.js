@@ -1,2 +1,2 @@
-export const loginWifi = "TeliaEpSS-234-Link";
-export const passwordWifi = "12345";
+export const loginWifi = "Telia_297262";
+export const passwordWifi = "KF7NII5FR73RJU";
