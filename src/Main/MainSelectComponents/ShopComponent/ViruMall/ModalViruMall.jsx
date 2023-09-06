@@ -7,7 +7,7 @@ import ViruMallCard from "./ViruMallCard";
 
 import { useSelector } from "react-redux";
 
-function ModalViruMall({ handleCloseViruMall }) {
+function ModalViruMall({ handleClose }) {
   const showViruMall = useSelector((state) => state.showViruMall);
 
   const handleGoToViruMall = () => {
@@ -15,7 +15,7 @@ function ModalViruMall({ handleCloseViruMall }) {
   };
 
   return (
-    <Modal show={showViruMall} onHide={handleCloseViruMall}>
+    <Modal show={showViruMall} onHide={handleClose}>
       <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
@@ -40,7 +40,7 @@ function ModalViruMall({ handleCloseViruMall }) {
         </div>
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-center align-items-center">
-        <button className="pressable-button-red" onClick={handleCloseViruMall}>
+        <button className="pressable-button-red" onClick={handleClose}>
           Close
         </button>
         <button className="pressable-button-resto" onClick={handleGoToViruMall}>

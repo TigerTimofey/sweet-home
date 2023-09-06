@@ -7,7 +7,7 @@ import MiniRimiCard from "./MiniRimiCard";
 
 import { useSelector } from "react-redux";
 
-function ModalMiniRimi({ handleCloseMiniRimi }) {
+function ModalMiniRimi({ handleClose }) {
   const showMiniRimi = useSelector((state) => state.showMiniRimi);
 
   const handleGoToMiniRimi = () => {
@@ -15,7 +15,7 @@ function ModalMiniRimi({ handleCloseMiniRimi }) {
   };
 
   return (
-    <Modal show={showMiniRimi} onHide={handleCloseMiniRimi}>
+    <Modal show={showMiniRimi} onHide={handleClose}>
       <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
@@ -40,7 +40,7 @@ function ModalMiniRimi({ handleCloseMiniRimi }) {
         </div>
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-center align-items-center">
-        <button className="pressable-button-red" onClick={handleCloseMiniRimi}>
+        <button className="pressable-button-red" onClick={handleClose}>
           Close
         </button>
         <button className="pressable-button-resto" onClick={handleGoToMiniRimi}>

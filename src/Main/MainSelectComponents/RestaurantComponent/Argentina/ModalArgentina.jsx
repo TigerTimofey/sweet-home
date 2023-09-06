@@ -7,7 +7,7 @@ import ArgentinaCard from "./ArgentinaCard";
 
 import { useSelector } from "react-redux";
 
-function ModalArgentina({ handleCloseArgentina }) {
+function ModalArgentina({ handleClose }) {
   const showArgentina = useSelector((state) => state.showArgentina);
 
   const handleGoToArgentina = () => {
@@ -15,7 +15,7 @@ function ModalArgentina({ handleCloseArgentina }) {
   };
 
   return (
-    <Modal show={showArgentina} onHide={handleCloseArgentina}>
+    <Modal show={showArgentina} onHide={handleClose}>
       <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
@@ -40,7 +40,7 @@ function ModalArgentina({ handleCloseArgentina }) {
         </div>
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-center align-items-center">
-        <button className="pressable-button-red" onClick={handleCloseArgentina}>
+        <button className="pressable-button-red" onClick={handleClose}>
           Close
         </button>
         <button

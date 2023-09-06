@@ -7,7 +7,7 @@ import JaposhaCard from "./JaposhaCard";
 
 import { useSelector } from "react-redux";
 
-function ModalJaposha({ handleCloseJaposha }) {
+function ModalJaposha({ handleClose }) {
   const showJaposha = useSelector((state) => state.showJaposha);
 
   const handleGoToJaposha = () => {
@@ -15,7 +15,7 @@ function ModalJaposha({ handleCloseJaposha }) {
   };
 
   return (
-    <Modal show={showJaposha} onHide={handleCloseJaposha}>
+    <Modal show={showJaposha} onHide={handleClose}>
       <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
@@ -40,7 +40,7 @@ function ModalJaposha({ handleCloseJaposha }) {
         </div>
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-center align-items-center">
-        <button className="pressable-button-red" onClick={handleCloseJaposha}>
+        <button className="pressable-button-red" onClick={handleClose}>
           Close
         </button>
         <button className="pressable-button-resto" onClick={handleGoToJaposha}>

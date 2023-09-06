@@ -7,7 +7,7 @@ import PreciousCafeCard from "./PreciousCafeCard";
 
 import { useSelector } from "react-redux";
 
-function ModalPreciousCafe({ handleClosePrecious }) {
+function ModalPreciousCafe({ handleClose }) {
   const showPrecious = useSelector((state) => state.showPrecious);
 
   const handleGoToPrecious = () => {
@@ -15,7 +15,7 @@ function ModalPreciousCafe({ handleClosePrecious }) {
   };
 
   return (
-    <Modal show={showPrecious} onHide={handleClosePrecious}>
+    <Modal show={showPrecious} onHide={handleClose}>
       <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
@@ -41,7 +41,7 @@ function ModalPreciousCafe({ handleClosePrecious }) {
         </div>
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-center align-items-center">
-        <button className="pressable-button-red" onClick={handleClosePrecious}>
+        <button className="pressable-button-red" onClick={handleClose}>
           Close
         </button>
         <button className="pressable-button-resto" onClick={handleGoToPrecious}>
