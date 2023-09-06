@@ -24,11 +24,8 @@ function TrashComponent() {
         videoRef.current.style.height = "auto";
       }
     };
-
-    // Call the resize function initially and on window resize
     resizeVideoContainer();
     window.addEventListener("resize", resizeVideoContainer);
-
     return () => {
       window.removeEventListener("resize", resizeVideoContainer);
     };

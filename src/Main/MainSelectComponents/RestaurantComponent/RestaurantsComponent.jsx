@@ -2,7 +2,16 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+
+import {
+  setShow,
+  setShowRein,
+  setShowJaposha,
+  setShowPrecious,
+  setShowArgentina,
+} from "../../../services/stateServices";
+
 import ModalVanaVillem from "./VanaVillem/ModalVanaVillem";
 import ModalKohvikRein from "./KohvikReinCard/ModalKohvikRein";
 import ModalJaposha from "./Japosha/ModalJaposha";
@@ -10,25 +19,22 @@ import ModalPreciousCafe from "./Preciuos/ModalPreciousCafe";
 import ModalArgentina from "./Argentina/ModalArgentina";
 
 function RestaurantsComponent() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const dispatch = useDispatch();
 
-  const [showRein, setShowRein] = useState(false);
-  const handleCloseRein = () => setShowRein(false);
-  const handleShowRein = () => setShowRein(true);
+  const handleClose = () => dispatch(setShow(false));
+  const handleShow = () => dispatch(setShow(true));
 
-  const [showJaposha, setShowJaposha] = useState(false);
-  const handleCloseJaposha = () => setShowJaposha(false);
-  const handleShowJaposha = () => setShowJaposha(true);
+  const handleCloseRein = () => dispatch(setShowRein(false));
+  const handleShowRein = () => dispatch(setShowRein(true));
 
-  const [showPrecious, setShowPrecious] = useState(false); // Corrected variable name
-  const handleClosePrecious = () => setShowPrecious(false);
-  const handleShowPrecious = () => setShowPrecious(true);
+  const handleCloseJaposha = () => dispatch(setShowJaposha(false));
+  const handleShowJaposha = () => dispatch(setShowJaposha(true));
 
-  const [showArgentina, setShowArgentina] = useState(false); // Corrected variable name
-  const handleCloseArgentina = () => setShowArgentina(false);
-  const handleShowArgentina = () => setShowArgentina(true);
+  const handleClosePrecious = () => dispatch(setShowPrecious(false));
+  const handleShowPrecious = () => dispatch(setShowPrecious(true));
+
+  const handleCloseArgentina = () => dispatch(setShowArgentina(false));
+  const handleShowArgentina = () => dispatch(setShowArgentina(true));
 
   return (
     <Container>
@@ -37,11 +43,7 @@ function RestaurantsComponent() {
           <button onClick={handleShow} className="pressable-button-resto">
             Vana Villem
           </button>
-          <ModalVanaVillem
-            handleShow={handleShow}
-            show={show}
-            handleClose={handleClose}
-          />
+          <ModalVanaVillem handleClose={handleClose} />
         </Col>
         <br /> <br />
         <Col xs={12}>
@@ -51,20 +53,14 @@ function RestaurantsComponent() {
           >
             Precious Cafe
           </button>
-          <ModalPreciousCafe
-            showPrecious={showPrecious} // Corrected prop name
-            handleClosePrecious={handleClosePrecious}
-          />
+          <ModalPreciousCafe handleClosePrecious={handleClosePrecious} />
         </Col>
         <br /> <br />
         <Col xs={12}>
           <button onClick={handleShowRein} className="pressable-button-resto">
             Rein Cafe
           </button>
-          <ModalKohvikRein
-            showRein={showRein}
-            handleCloseRein={handleCloseRein}
-          />
+          <ModalKohvikRein handleCloseRein={handleCloseRein} />
         </Col>
         <br /> <br />
         <Col xs={12}>
@@ -74,10 +70,7 @@ function RestaurantsComponent() {
           >
             Japosha Sushi
           </button>
-          <ModalJaposha
-            showJaposha={showJaposha}
-            handleCloseJaposha={handleCloseJaposha}
-          />
+          <ModalJaposha handleCloseJaposha={handleCloseJaposha} />
         </Col>
         <Col xs={12}>
           <button
@@ -86,10 +79,7 @@ function RestaurantsComponent() {
           >
             Restoran Argentina
           </button>
-          <ModalArgentina
-            showArgentina={showArgentina}
-            handleCloseArgentina={handleCloseArgentina}
-          />
+          <ModalArgentina handleCloseArgentina={handleCloseArgentina} />
         </Col>
       </Row>
     </Container>

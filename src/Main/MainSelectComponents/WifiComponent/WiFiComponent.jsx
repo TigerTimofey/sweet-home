@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { loginWifi, passwordWifi } from "../../../services/dataForComponents";
 import Badge from "react-bootstrap/Badge";
+import { useSelector, useDispatch } from "react-redux";
+import { setCopied } from "../../../services/stateServices";
 
 function WiFiComponent() {
-  const [copied, setCopied] = useState(false);
+  const dispatch = useDispatch();
+  const copied = useSelector((state) => state.copied);
 
   const copyPasswordToClipboard = () => {
     navigator.clipboard.writeText(passwordWifi);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1000);
+    dispatch(setCopied(true));
+    setTimeout(() => dispatch(setCopied(false)), 1000);
   };
 
   const handlePasswordClick = () => {
@@ -19,7 +22,7 @@ function WiFiComponent() {
   };
 
   return (
-    <div className="text-contact d-flex  text-wifi ">
+    <div className="text-contact d-flex text-wifi ">
       <Container>
         <br />
 

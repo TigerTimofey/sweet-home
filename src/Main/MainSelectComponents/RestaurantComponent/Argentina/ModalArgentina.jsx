@@ -5,7 +5,11 @@ import Col from "react-bootstrap/Col";
 
 import ArgentinaCard from "./ArgentinaCard";
 
-function ModalArgentina({ showArgentina, handleCloseArgentina }) {
+import { useSelector } from "react-redux";
+
+function ModalArgentina({ handleCloseArgentina }) {
+  const showArgentina = useSelector((state) => state.showArgentina);
+
   const handleGoToArgentina = () => {
     window.open("https://goo.gl/maps/fgVaGTa5Ga1Sw8HX7", "_blank");
   };
@@ -31,7 +35,6 @@ function ModalArgentina({ showArgentina, handleCloseArgentina }) {
               <Col>
                 <ArgentinaCard />
               </Col>
-              {/* <Col></Col> */}
             </Row>
           </Container>
         </div>

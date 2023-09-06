@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import Swal from "sweetalert2/dist/sweetalert2.js";
+import { useSelector, useDispatch } from "react-redux";
+
+import { setSelectedOption } from "../services/stateServices";
 import WiFiComponent from "./MainSelectComponents/WifiComponent/WiFiComponent";
 import TrashComponent from "./MainSelectComponents/TrashComponent/TrashComponent";
 
@@ -7,8 +8,12 @@ import RestaurantsComponent from "./MainSelectComponents/RestaurantComponent/Res
 import ContactComponent from "./MainSelectComponents/ContactComponent/ContactComponent";
 import ShopComponent from "./MainSelectComponents/ShopComponent/ShopComponent";
 
+import Swal from "sweetalert2/dist/sweetalert2.js";
+
 function MenuSelect() {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const dispatch = useDispatch();
+
+  const selectedOption = useSelector((state) => state.selectedOption);
 
   const handleSelectOption = async () => {
     const { value: question } = await Swal.fire({
@@ -31,7 +36,7 @@ function MenuSelect() {
     });
 
     if (question) {
-      setSelectedOption(question);
+      dispatch(setSelectedOption(question));
     } else {
       Swal.fire("Please choose a question");
     }
@@ -56,15 +61,14 @@ function MenuSelect() {
 
   return (
     <div>
-      <button className="pressable-button " onClick={handleSelectOption}>
+      <button className="pressable-button" onClick={handleSelectOption}>
         MENU
       </button>
       <br />
       <br />
       {selectedOption && (
         <div>
-          <h3>{capitalizeFirstLetter(selectedOption)}</h3>
-
+          <h3>{selectedOption}</h3>
           {renderSelectedComponent()}
         </div>
       )}
@@ -73,7 +77,3 @@ function MenuSelect() {
 }
 
 export default MenuSelect;
-
-const capitalizeFirstLetter = (string) => {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-};

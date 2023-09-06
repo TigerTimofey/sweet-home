@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
-import Swal from "sweetalert2/dist/sweetalert2.js";
-import { passwordLogin } from "../services/PasswordLogin";
+import { useEffect } from "react";
 
-import { setPasswordCheck } from "../services/stateServices";
 import { useDispatch } from "react-redux";
+
+import { passwordLogin } from "../services/PasswordLogin";
+import { setPasswordCheck } from "../services/stateServices";
+
+import Swal from "sweetalert2/dist/sweetalert2.js";
 
 function Start() {
   const dispatch = useDispatch();

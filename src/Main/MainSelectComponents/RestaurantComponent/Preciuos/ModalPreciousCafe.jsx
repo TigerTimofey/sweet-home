@@ -2,9 +2,14 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 import PreciousCafeCard from "./PreciousCafeCard";
 
-function ModalPreciousCafe({ showPrecious, handleClosePrecious }) {
+import { useSelector } from "react-redux";
+
+function ModalPreciousCafe({ handleClosePrecious }) {
+  const showPrecious = useSelector((state) => state.showPrecious);
+
   const handleGoToPrecious = () => {
     window.open("https://goo.gl/maps/ACkSPwgjuwCRivPS8", "_blank");
   };
@@ -31,7 +36,6 @@ function ModalPreciousCafe({ showPrecious, handleClosePrecious }) {
               <Col>
                 <PreciousCafeCard />
               </Col>
-              {/* <Col></Col> */}
             </Row>
           </Container>
         </div>

@@ -2,9 +2,14 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 import StockmannCard from "./StockmannCard";
 
-function ModalStockmann({ showStockmann, handleCloseStockmann }) {
+import { useSelector } from "react-redux";
+
+function ModalStockmann({ handleCloseStockmann }) {
+  const showStockmann = useSelector((state) => state.showStockmann);
+
   const handleGoToStockmann = () => {
     window.open("https://goo.gl/maps/g5dEA1ikrJAhchHu9", "_blank");
   };
@@ -14,7 +19,7 @@ function ModalStockmann({ showStockmann, handleCloseStockmann }) {
       <Modal.Header>
         <Modal.Title className="container">
           <div className="text-center">
-            Mini Rimi <br />
+            Stockmann <br />
             <h6>
               9:00 AM - 9:00 PM
               <br />
@@ -30,7 +35,6 @@ function ModalStockmann({ showStockmann, handleCloseStockmann }) {
               <Col>
                 <StockmannCard />
               </Col>
-              {/* <Col></Col> */}
             </Row>
           </Container>
         </div>

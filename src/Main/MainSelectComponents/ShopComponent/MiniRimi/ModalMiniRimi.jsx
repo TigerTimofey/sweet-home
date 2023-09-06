@@ -2,9 +2,14 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 import MiniRimiCard from "./MiniRimiCard";
 
-function ModalMiniRimi({ showMiniRimi, handleCloseMiniRimi }) {
+import { useSelector } from "react-redux";
+
+function ModalMiniRimi({ handleCloseMiniRimi }) {
+  const showMiniRimi = useSelector((state) => state.showMiniRimi);
+
   const handleGoToMiniRimi = () => {
     window.open("https://goo.gl/maps/mh9t3nfNvJ4QTj5P9", "_blank");
   };
@@ -30,7 +35,6 @@ function ModalMiniRimi({ showMiniRimi, handleCloseMiniRimi }) {
               <Col>
                 <MiniRimiCard />
               </Col>
-              {/* <Col></Col> */}
             </Row>
           </Container>
         </div>

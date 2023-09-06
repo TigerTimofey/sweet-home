@@ -2,9 +2,14 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 import RestaurantCardRein from "./RestaurantCardRein";
 
-function ModalKohvikRein({ showRein, handleCloseRein }) {
+import { useSelector } from "react-redux";
+
+function ModalKohvikRein({ handleCloseRein }) {
+  const showRein = useSelector((state) => state.showRein);
+
   const handleGoToRein = () => {
     window.open("https://goo.gl/maps/AS5z5h2xuw5JMHG89", "_blank");
   };
@@ -30,7 +35,6 @@ function ModalKohvikRein({ showRein, handleCloseRein }) {
               <Col>
                 <RestaurantCardRein />
               </Col>
-              {/* <Col></Col> */}
             </Row>
           </Container>
         </div>

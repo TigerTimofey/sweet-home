@@ -2,9 +2,14 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 import RestaurantCard from "./RestaurantCard";
 
-function ModalVanaVillem({ show, handleClose }) {
+import { useSelector } from "react-redux";
+
+function ModalVanaVillem({ handleClose }) {
+  const show = useSelector((state) => state.show);
+
   const handleGoToVanaVillem = () => {
     window.open("https://goo.gl/maps/af1EC11J758Q414J7", "_blank");
   };
@@ -32,7 +37,6 @@ function ModalVanaVillem({ show, handleClose }) {
               <Col>
                 <RestaurantCard />
               </Col>
-              {/* <Col></Col> */}
             </Row>
           </Container>
         </div>

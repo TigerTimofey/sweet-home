@@ -2,9 +2,14 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 import ViruMallCard from "./ViruMallCard";
 
-function ModalViruMall({ showViruMall, handleCloseViruMall }) {
+import { useSelector } from "react-redux";
+
+function ModalViruMall({ handleCloseViruMall }) {
+  const showViruMall = useSelector((state) => state.showViruMall);
+
   const handleGoToViruMall = () => {
     window.open("https://goo.gl/maps/QKpQ7KmxPEzYghM26", "_blank");
   };
@@ -30,7 +35,6 @@ function ModalViruMall({ showViruMall, handleCloseViruMall }) {
               <Col>
                 <ViruMallCard />
               </Col>
-              {/* <Col></Col> */}
             </Row>
           </Container>
         </div>

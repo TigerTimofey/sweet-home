@@ -2,28 +2,34 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+
+import {
+  setShowMiniRimi,
+  setShowStockmann,
+  setShowPrismaShop,
+  setShowViruMall,
+} from "../../../services/stateServices";
+
 import ModalMiniRimi from "./MiniRimi/ModalMiniRimi";
 import ModalStockmann from "./Stockmann/ModalStockmann";
 import ModalPrismaShop from "./PrismaShop/ModalPrismaShop";
 import ModalViruMall from "./ViruMall/ModalViruMall";
 
 function ShopComponent() {
-  const [showMiniRimi, setShowMiniRimi] = useState(false);
-  const handleCloseMiniRimi = () => setShowMiniRimi(false);
-  const handleShowMiniRimi = () => setShowMiniRimi(true);
+  const dispatch = useDispatch();
 
-  const [showStockmann, setShowStockmann] = useState(false);
-  const handleCloseStockmann = () => setShowStockmann(false);
-  const handleShowStockmann = () => setShowStockmann(true);
+  const handleCloseMiniRimi = () => dispatch(setShowMiniRimi(false));
+  const handleShowMiniRimi = () => dispatch(setShowMiniRimi(true));
 
-  const [showPrismaShop, setShowPrismaShop] = useState(false);
-  const handleClosePrismaShop = () => setShowPrismaShop(false);
-  const handleShowPrismaShop = () => setShowPrismaShop(true);
+  const handleCloseStockmann = () => dispatch(setShowStockmann(false));
+  const handleShowStockmann = () => dispatch(setShowStockmann(true));
 
-  const [showViruMall, setShowViruMall] = useState(false);
-  const handleCloseViruMall = () => setShowViruMall(false);
-  const handleShowViruMall = () => setShowViruMall(true);
+  const handleClosePrismaShop = () => dispatch(setShowPrismaShop(false));
+  const handleShowPrismaShop = () => dispatch(setShowPrismaShop(true));
+
+  const handleCloseViruMall = () => dispatch(setShowViruMall(false));
+  const handleShowViruMall = () => dispatch(setShowViruMall(true));
   return (
     <Container>
       <Row xs={6}>
@@ -34,10 +40,7 @@ function ShopComponent() {
           >
             Mini Rimi
           </button>
-          <ModalMiniRimi
-            showMiniRimi={showMiniRimi}
-            handleCloseMiniRimi={handleCloseMiniRimi}
-          />
+          <ModalMiniRimi handleCloseMiniRimi={handleCloseMiniRimi} />
         </Col>
         <br /> <br />
         <Col xs={12}>
@@ -47,10 +50,7 @@ function ShopComponent() {
           >
             Stockmann
           </button>
-          <ModalStockmann
-            showStockmann={showStockmann}
-            handleCloseStockmann={handleCloseStockmann}
-          />
+          <ModalStockmann handleCloseStockmann={handleCloseStockmann} />
         </Col>
         <br /> <br />
         <Col xs={12}>
@@ -60,10 +60,7 @@ function ShopComponent() {
           >
             Prisma 24/7
           </button>
-          <ModalPrismaShop
-            showPrismaShop={showPrismaShop}
-            handleClosePrismaShop={handleClosePrismaShop}
-          />
+          <ModalPrismaShop handleClosePrismaShop={handleClosePrismaShop} />
         </Col>
         <Col xs={12}>
           <button
@@ -72,10 +69,7 @@ function ShopComponent() {
           >
             Viru Mall
           </button>
-          <ModalViruMall
-            showViruMall={showViruMall}
-            handleCloseViruMall={handleCloseViruMall}
-          />
+          <ModalViruMall handleCloseViruMall={handleCloseViruMall} />
         </Col>
         <br /> <br />
       </Row>

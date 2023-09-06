@@ -2,9 +2,14 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 import JaposhaCard from "./JaposhaCard";
 
-function ModalJaposha({ showJaposha, handleCloseJaposha }) {
+import { useSelector } from "react-redux";
+
+function ModalJaposha({ handleCloseJaposha }) {
+  const showJaposha = useSelector((state) => state.showJaposha);
+
   const handleGoToJaposha = () => {
     window.open("https://goo.gl/maps/28xcPwDJF9T9Fxm78", "_blank");
   };
@@ -30,7 +35,6 @@ function ModalJaposha({ showJaposha, handleCloseJaposha }) {
               <Col>
                 <JaposhaCard />
               </Col>
-              {/* <Col></Col> */}
             </Row>
           </Container>
         </div>

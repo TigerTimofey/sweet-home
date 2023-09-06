@@ -2,9 +2,14 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 import PrismaShopCard from "./PrismaShopCard";
 
-function ModalPrismaShop({ showPrismaShop, handleClosePrismaShop }) {
+import { useSelector } from "react-redux";
+
+function ModalPrismaShop({ handleClosePrismaShop }) {
+  const showPrismaShop = useSelector((state) => state.showPrismaShop);
+
   const handleGoToPrismaShop = () => {
     window.open("https://goo.gl/maps/JCLFxoWVqEeV74Uf7", "_blank");
   };
@@ -30,7 +35,6 @@ function ModalPrismaShop({ showPrismaShop, handleClosePrismaShop }) {
               <Col>
                 <PrismaShopCard />
               </Col>
-              {/* <Col></Col> */}
             </Row>
           </Container>
         </div>
