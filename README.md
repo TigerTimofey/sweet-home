@@ -1,4 +1,6 @@
-# Weather App
+# Sweet Home App
+
+## `The password for viewing the App is ` 123
 
 ## `About project`
 
