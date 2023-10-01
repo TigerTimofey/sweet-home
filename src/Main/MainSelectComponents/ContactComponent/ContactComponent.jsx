@@ -42,7 +42,7 @@ function ContactComponent() {
               className="d-flex justify-content-center p-3"
             >
               <Badge pill bg="success" className="p-3 w-50 badge-contact">
-                <a href="tel:+37255647759">Call</a>
+                {/* <a href="tel:+37255647759">Call</a> */}
               </Badge>
             </Stack>
           </Card>
@@ -69,7 +69,7 @@ function ContactComponent() {
               className="d-flex justify-content-center p-3"
             >
               <Badge pill bg="success" className="p-3 w-50 badge-contact">
-                <a href="tel:+37258581912">Call</a>
+                {/* <a href="tel:+37258581912">Call</a> */}
               </Badge>
             </Stack>
           </Card>
