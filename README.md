@@ -6,6 +6,11 @@
 
 This project is intended for users who rent out their apartment through Airbnb. Guests of this user simply scan the QR code and get to the site page. Filling the site gives a complete overview of how and what works inside the apartment.
 
+## `Images`
+
+<img src='https://github.com/TigerTimofey/sweet-home/assets/119110538/8eae87b5-2396-4436-a183-cf42d74c6394' alt='1' height='440px'>
+<img src='https://github.com/TigerTimofey/sweet-home/assets/119110538/ef547486-9b5b-4c89-9809-58013b1e6952' alt='2' height='440px'>
+
 ## `Functionality`
 
 As soon as guests scan the QR code and get to the site page. In order to enter the site they need to enter a password. After entering the correct password, the user is able to interact with the menu. If the password is incorrect, the system will prompt you to enter it again. In the menu, the user will get a pop-up window where he will be asked to select a question. After selecting a question, the user will be shown a component with information. The project is primarily optimized for phones, but works flawlessly on all screens.
